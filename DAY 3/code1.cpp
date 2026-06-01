@@ -1,27 +1,28 @@
 // to check whether a number is prime or not
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
-    int n, i, prime = 1;
+    int n, flag = 1;
 
-    printf("Enter a number: ");
-    scanf("%d", &n);
+    cout << "Enter a number: ";
+    cin >> n;
 
-    if (n <= 1) {
-        prime = 0;
-    } else {
-        for (i = 2; i <= n / 2; i++) {
+    if (n <= 1)
+        flag = 0;
+    else {
+        for (int i = 2; i <= n / 2; i++) {
             if (n % i == 0) {
-                prime = 0;
+                flag = 0;
                 break;
             }
         }
     }
 
-    if (prime)
-        printf("Prime number");
+    if (flag)
+        cout << "Prime Number";
     else
-        printf("Not a prime number");
+        cout << "Not Prime Number";
 
     return 0;
 }
