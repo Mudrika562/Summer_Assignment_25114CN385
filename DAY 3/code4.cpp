@@ -1,17 +1,18 @@
 //LCM of two numbers
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int a, b, max;
 
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
 
     max = (a > b) ? a : b;
 
-    while (1) {
+    while (true) {
         if (max % a == 0 && max % b == 0) {
-            printf("LCM = %d", max);
+            cout << "LCM = " << max;
             break;
         }
         max++;
