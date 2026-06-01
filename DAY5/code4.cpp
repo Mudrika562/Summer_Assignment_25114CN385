@@ -1,20 +1,21 @@
 //Find Largest Prime Factor
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
-    int n, i, largest = 0;
+    int n, largest = 0;
 
-    printf("Enter a number: ");
-    scanf("%d", &n);
+    cout << "Enter a number: ";
+    cin >> n;
 
-    for(i = 2; i <= n; i++) {
-        while(n % i == 0) {
+    for (int i = 2; i <= n; i++) {
+        while (n % i == 0) {
             largest = i;
             n /= i;
         }
     }
 
-    printf("Largest Prime Factor = %d", largest);
+    cout << "Largest Prime Factor = " << largest;
 
     return 0;
 }
