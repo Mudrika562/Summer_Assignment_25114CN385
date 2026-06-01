@@ -2,18 +2,29 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int n;
-    long long factorial = 1;
+int main()
+{
+    int n, i = 1;
+    long long fact = 1;
 
     cout << "Enter a number: ";
     cin >> n;
 
-    for(int i = 1; i <= n; i++) {
-        factorial = factorial * i;
+    if (n < 0)
+    {
+        cout << "Factorial not defined for negative numbers.";
     }
+    else
+    {
+        do
+        {
+            fact = fact * i;
+            i++;
+        }
+        while (i <= n);
 
-    cout << "Factorial = " << factorial;
+        cout << "Factorial = " << fact;
+    }
 
     return 0;
 }
