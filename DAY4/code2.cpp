@@ -1,24 +1,27 @@
 //nth fibonacci term
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int n, a = 0, b = 1, c;
 
-    printf("Enter n: ");
-    scanf("%d", &n);
+    cout << "Enter n: ";
+    cin >> n;
 
-    if(n == 1)
-        printf("Nth Fibonacci term = %d", a);
-    else if(n == 2)
-        printf("Nth Fibonacci term = %d", b);
+    if (n == 1)
+        cout << a;
+    else if (n == 2)
+        cout << b;
     else {
-        for(int i = 3; i <= n; i++) {
+        for (int i = 3; i <= n; i++) {
             c = a + b;
             a = b;
             b = c;
         }
-        printf("Nth Fibonacci term = %d", b);
+        cout << c;
     }
 
+    return 0;
+}
     return 0;
 }

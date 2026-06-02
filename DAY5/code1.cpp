@@ -1,21 +1,22 @@
 // Check perfect number
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
-    int n, i, sum = 0;
+    int n, sum = 0;
 
-    printf("Enter a number: ");
-    scanf("%d", &n);
+    cout << "Enter a number: ";
+    cin >> n;
 
-    for(i = 1; i < n; i++) {
-        if(n % i == 0)
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0)
             sum += i;
     }
 
-    if(sum == n)
-        printf("Perfect Number");
+    if (sum == n)
+        cout << "Perfect Number";
     else
-        printf("Not a Perfect Number");
+        cout << "Not Perfect Number";
 
     return 0;
 }

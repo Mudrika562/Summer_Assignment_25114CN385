@@ -1,26 +1,24 @@
 // Armstrong numbers in a range
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
-    int start, end, num, temp, digit, sum;
+    int start, end;
 
-    printf("Enter start and end: ");
-    scanf("%d %d", &start, &end);
+    cout << "Enter range: ";
+    cin >> start >> end;
 
-    printf("Armstrong numbers are:\n");
+    for (int n = start; n <= end; n++) {
+        int temp = n, digit, sum = 0;
 
-    for(num = start; num <= end; num++) {
-        temp = num;
-        sum = 0;
-
-        while(temp > 0) {
+        while (temp > 0) {
             digit = temp % 10;
             sum += digit * digit * digit;
             temp /= 10;
         }
 
-        if(sum == num)
-            printf("%d ", num);
+        if (sum == n)
+            cout << n << " ";
     }
 
     return 0;

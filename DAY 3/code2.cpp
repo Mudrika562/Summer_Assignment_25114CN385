@@ -1,29 +1,29 @@
 //prime numbers in a range
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
-    int start, end, i, j, prime;
+    int start, end;
 
-    printf("Enter range: ");
-    scanf("%d %d", &start, &end);
+    cout << "Enter starting and ending numbers: ";
+    cin >> start >> end;
 
-    printf("Prime numbers are:\n");
+    for (int n = start; n <= end; n++) {
+        int flag = 1;
 
-    for (i = start; i <= end; i++) {
-        if (i <= 1)
-            continue;
-
-        prime = 1;
-
-        for (j = 2; j <= i / 2; j++) {
-            if (i % j == 0) {
-                prime = 0;
-                break;
+        if (n <= 1)
+            flag = 0;
+        else {
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    flag = 0;
+                    break;
+                }
             }
         }
 
-        if (prime)
-            printf("%d ", i);
+        if (flag)
+            cout << n << " ";
     }
 
     return 0;

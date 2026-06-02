@@ -1,24 +1,25 @@
 // Check armstrong number
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
-    int num, temp, digit, sum = 0;
+    int n, temp, digit, sum = 0;
 
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    cout << "Enter a number: ";
+    cin >> n;
 
-    temp = num;
+    temp = n;
 
-    while(temp > 0) {
+    while (temp > 0) {
         digit = temp % 10;
         sum += digit * digit * digit;
         temp /= 10;
     }
 
-    if(sum == num)
-        printf("Armstrong Number");
+    if (sum == n)
+        cout << "Armstrong Number";
     else
-        printf("Not an Armstrong Number");
+        cout << "Not Armstrong Number";
 
     return 0;
 }
