@@ -24,6 +24,6 @@ int main() {
 
         cout << "Column " << j + 1 << " = " << sum << endl;
     }
-
+    
     return 0;
 }
